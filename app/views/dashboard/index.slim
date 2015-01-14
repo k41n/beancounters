@@ -1,0 +1,13 @@
+table.table.table-striped.table-bordered
+  tr
+    th Parameter type
+    th Failures
+
+  - Sample.types.each do |type|
+    - failcnt = Sample.where(sample_type: type).order('created_at DESC').limit(1).last.try(:failcnt)
+    tr
+      td= link_to type, samples_path(type: type)
+      - if failcnt.to_i > 0
+        td.red.bold= failcnt
+      - else
+        td No

@@ -26,6 +26,7 @@ html lang="en"
         .col-md-3
           .well.sidebar-nav
             ul.nav.nav-list
+              li= link_to 'Dashboard', root_path
               - Sample.types.each do |sample_type|
                 li= link_to sample_type, samples_path(type: sample_type)
         .col-md-9
@@ -33,4 +34,4 @@ html lang="en"
           = yield
 
       footer
-        p &copy; Company 2015
+        p &copy; ООО Кодер 2014
