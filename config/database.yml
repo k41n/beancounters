@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  database: beancounter_development
+  template: template0
+  encoding: utf8
+  username: k41n
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: beancounter_test
+  template: template0
+  encoding: utf8
+  username: k41n
+  password:
+  host: localhost

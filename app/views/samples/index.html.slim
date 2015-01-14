@@ -1,0 +1,4 @@
+h3 Held
+= line_chart [ { name: 'Held', data: @scope.group_by_minute(:created_at).maximum(:held) }, { name: 'Barrier', data: @scope.group_by_minute(:created_at).maximum(:barrier) } ], colors: ["blue", "green"]
+h3 Failcnt
+= area_chart @scope.group_by_minute(:created_at).maximum(:failcnt), colors: ["red"]
