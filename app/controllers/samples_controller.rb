@@ -22,6 +22,6 @@ class SamplesController < ApplicationController
   def index
     @scope = Sample
     @scope = @scope.where(sample_type: params[:type]) if params[:type]
-    @scope = @scope.where('created_at > ?', 1.day.ago)
+    @scope = @scope.where('created_at > ?', 7.days.ago)
   end
 end
